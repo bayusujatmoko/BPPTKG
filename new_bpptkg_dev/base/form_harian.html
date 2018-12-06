@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BPPTKG</title>
+    <!-- script datetimepicker -->
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <link rel="icon" href="images/logo.png" type="image/ico" />
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
+    <script type="text/javascript">
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm:ss',
+        language: 'pt-BR'
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Dropzone.js -->
+    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+                <a href="index.html" class="site_title"><img src="images/logo.png" alt="" class="img-circle" style="width:40px;height:40px;"> <span>BPPTKG</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+                <div class="profile_pic">
+                  <img src="images/profil.png" alt="..." class="img-circle profile_img" >
+                </div>
+                <div class="profile_info">
+                  <span>Welcome,</span>
+                  <h2>Bayu A.S.</h2>
+                </div>
+              </div>
+              <!-- /menu profile quick info -->
+  
+              <br />
+  
+              <!-- sidebar menu -->
+              <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                <div class="menu_section">
+                  <h3>General</h3>
+                  <ul class="nav side-menu">
+                    <li><a><i class="fa fa-home"></i> Home </a>
+                    </li>
+                    
+                    <li><a><i class="fa fa-file"></i> Data Umum <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="form.html"><i class="glyphicon glyphicon-file"></i>&nbsp;File</a></li>
+                        <li><a href="form_advanced.html"><i class="glyphicon glyphicon-inbox"></i>&nbsp;Archives</a></li>
+                        <li><a href="form_validation.html"><i class="glyphicon glyphicon-film"></i>&nbsp;Movie</a></li>
+                        <li><a href="form_wizards.html"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Peta Tematik</a></li>
+                        <li><a href="form_upload.html"><i class="glyphicon glyphicon-user"></i>&nbsp;Analisa Presensi</a></li>
+                        <li><a href="form_buttons.html"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;Analisa Tugas</a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-desktop"></i> Data Monitoring <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="general_elements.html">Monitoring</a></li>
+                        <li><a href="media_gallery.html">Seismik Cacahan</a></li>
+                        <li><a href="typography.html">RSAM</a></li>
+                        <li><a href="icons.html">EDM</a></li>
+                        <li><a href="glyphicons.html">Curah Hujan</a></li>
+                        <li><a href="widgets.html">Tilt Meter</a></li>
+                        <li><a href="invoice.html">WebObs</a></li>
+                        <li><a href="inbox.html">Query Data</a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-edit"></i> Form <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="tables.html">Laporan Harian</a></li>
+                        <li><a href="tables_dynamic.html">Laporan Mingguan/Bulanan</a></li>
+                        <li><a href="tables_dynamic.html">EDM</a></li>
+                        <li><a href="tables_dynamic.html">Kimia</a></li>
+                        <li><a href="tables_dynamic.html">Pelayanan Publik</a></li>
+                        <li><a href="tables_dynamic.html">Notulen Rapat</a></li>
+                        <li><a href="tables_dynamic.html">Seminar</a></li>
+                        <li><a href="tables_dynamic.html">Laporan Non Teknis</a></li>
+                        <li><a href="tables_dynamic.html">Data User</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/profil.png" alt="">Bayu A.S.
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Form Laporan Harian <small>Sessions</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <!-- Tabs -->
+                    <div id="wizard_verticle" class="form_wizard wizard_verticle">
+                      <ul class="list-unstyled wizard_steps">
+                        <li>
+                          <a href="#step-11">
+                            <span class="step_no">1</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-22">
+                            <span class="step_no">2</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-33">
+                            <span class="step_no">3</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-44">
+                            <span class="step_no">4</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-55">
+                            <span class="step_no">5</span>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="#step-66">
+                              <span class="step_no">6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#step-77">
+                              <span class="step_no">7</span>
+                            </a>
+                        </li>
+                          
+                      </ul>
+
+                      <div id="step-11">
+                            <br>
+                          <span class="section">Visual</span>
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Upload File Foto</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                  <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Settings 1</a>
+                                    </li>
+                                    <li><a href="#">Settings 2</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                              <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
+                              <form action="form_upload.html" class="dropzone">
+                                
+                              </form>
+                              <br>
+                              <div class="form-group">
+                                      <div class="row">
+                                        <div class="col-md-3 col-sm-3 col-xs-3">
+                                          <label>Cuaca Cerah</label>
+                                              <input type="time" class="form-control" id="cc1" placeholder="waktu mulai">
+                                              <input type="time" class="form-control" id="cc2" placeholder="waktu akhir">
+                                        </div>  
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <label>Iklim </label>  
+                                            <div class="form-group">
+                                              <select class="form-control" id="ik1">
+                                                <option>Waktu : </option>
+                                                <option>Pagi</option>
+                                                <option>Siang</option>
+                                                <option>Sore</option>
+                                              </select>
+                                            </div> 
+                                            <input type="text" class="form-control" id="ik2" placeholder="Suhu"> 
+                                            <div class="form-group">
+                                              <select class="form-control" id="ik3">
+                                                <option>Angin Ke : </option>
+                                                <option>Utara</option>
+                                                <option>Timur Laut</option>
+                                                <option>Timur</option>
+                                                <option>Tenggara</option>
+                                                <option>Selatan</option>
+                                                <option>Barat Daya</option>
+                                                <option>Barat</option>
+                                                <option>Barat Laut</option>
+                                              </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="ik4" placeholder="Kecepatan Angin">
+                                            <input type="text" class="form-control" id="ik5" placeholder="Kelembaban Angin">
+                                            <input type="text" class="form-control" id="ik6" placeholder="Tekanan Udara"> 
+                                            </div> 
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xs-6">
+                                            <label for="">Asap Solfatara</label> 
+                                            <input type="text" class="form-control" id="as1" placeholder="Waktu">
+                                            <div class="form-group">
+                                              <select class="form-control" id="as2">
+                                                <option>Warna asap : </option>
+                                                <option>Putih</option>
+                                                <option>Abu-abu</option>
+                                              </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" id="as3">
+                                                  <option>Intensitas asap : </option>
+                                                  <option>Tipis</option>
+                                                  <option>Sedang</option>
+                                                  <option>Tebal</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" id="as4">
+                                                  <option>Tekanan asap : </option>
+                                                  <option>Lemah</option>
+                                                  <option>Sedang</option>
+                                                  <option>Kuat</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" id="as4">
+                                                  <option>Arah Asap : </option>
+                                                  <option>Utara</option>
+                                                  <option>Timur Laut</option>
+                                                  <option>Timur</option>
+                                                  <option>Tenggara</option>
+                                                  <option>Selatan</option>
+                                                  <option>Barat Daya</option>
+                                                  <option>Barat</option>
+                                                  <option>Barat Laut</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="as5" placeholder="Tinggi">
+                                        </div>  
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xs-6">
+                                            <label for="">Guguran Lava</label> 
+                                            <input type="text" class="form-control" id="gl1" placeholder="Waktu">
+                                            <input type="text" class="form-control" id="gl2" placeholder="Penjelasan">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xs-6">
+                                            <label for="">Apidiam/Sinarapi</label> 
+                                            <input type="text" class="form-control" id="ap1" placeholder="Waktu mulai">
+                                            <input type="text" class="form-control" id="ap2" placeholder="Waktu akhir">
+                                            <input type="text" class="form-control" id="ap2" placeholder="Penjelasan">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xs-6">
+                                          <label for="">Hembusan</label> 
+                                          <input type="text" class="form-control" id="he1" placeholder="Waktu mulai">
+                                          <input type="text" class="form-control" id="he2" placeholder="Waktu akhir">
+                                          <input type="text" class="form-control" id="he3" placeholder="Penjelasan">
+                                        </div>  
+                                      </div> 
+                                      <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xs-6">
+                                            <label for="">Suara Lain-lain</label> 
+                                            <input type="text" class="form-control" id="su1" placeholder="Waktu">
+                                            <input type="text" class="form-control" id="su2" placeholder="Penjelasan">
+                                        </div>
+                                      </div>
+                              </div>
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                      </div>
+                      <div id="step-22">
+                        <span class="section">Seismisitas</span>
+                        <table class="table">
+                            <thead>
+                              <tr class="success">
+                                <th>Jenis Gempa</th>
+                                <th>Jumlah Sehari</th>
+                                <th>Amplitudo (mm)</th>
+                                <th></th>
+                                <th>Durasi (Detik)</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Awanpanas (AP)</td>
+                                <td><input type="text" class="form-control" id="ap1"></td>
+                                <td><input type="text" class="form-control" id="ap2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="ap3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="ap4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="ap5" placeholder="max"></td>
+                              </tr>      
+                              <tr class="active">
+                                <td>Vulkanik dalam (VA)</td>
+                                <td><input type="text" class="form-control" id="va1"></td>
+                                <td><input type="text" class="form-control" id="va2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="va3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="va4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="va5" placeholder="max"></td>
+                              </tr>
+                              <tr>
+                                <td>Vulkanik dangkal</td>
+                                <td><input type="text" class="form-control" id="vd1"></td>
+                                <td><input type="text" class="form-control" id="vd2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="vd3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="vd4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="vd5" placeholder="max"></td>
+                              </tr>
+                              <tr class="active">
+                                <td>Low Frekuensi</td>
+                                <td><input type="text" class="form-control" id="lf1"></td>
+                                <td><input type="text" class="form-control" id="lf2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="lf3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="lf4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="lf5" placeholder="max"></td>
+                              </tr>
+                              <tr>
+                                <td>LHF</td>
+                                <td><input type="text" class="form-control" id="lh1"></td>
+                                <td><input type="text" class="form-control" id="lh2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="lh3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="lh4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="lh5" placeholder="max"></td>
+                              </tr>
+                              <tr class="active">
+                                <td>Multi phase</td>
+                                <td><input type="text" class="form-control" id="mp1"></td>
+                                <td><input type="text" class="form-control" id="mp2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="mp3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="mp4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="mp5" placeholder="max"></td>
+                              </tr>
+                              <tr>
+                                <td>Guguran</td>
+                                <td><input type="text" class="form-control" id="g1"></td>
+                                <td><input type="text" class="form-control" id="g2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="g3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="g4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="g5" placeholder="max"></td>
+                              </tr>
+                              <tr class="active">
+                                <td>Tektonik</td>
+                                <td><input type="text" class="form-control" id="t1"></td>
+                                <td><input type="text" class="form-control" id="t2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="t3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="t4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="t5" placeholder="max"></td>
+                              </tr>
+                              <tr>
+                                <td>Tremor</td>
+                                <td><input type="text" class="form-control" id="tr1"></td>
+                                <td><input type="text" class="form-control" id="tr2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="tr3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="tr4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="tr5" placeholder="max"></td>
+                              </tr>
+                              <tr class="active">
+                                <td>Hembusan</td>
+                                <td><input type="text" class="form-control" id="he1"></td>
+                                <td><input type="text" class="form-control" id="he2" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="he3" placeholder="max"></td>
+                                <td><input type="text" class="form-control" id="he4" placeholder="min"></td>
+                                <td><input type="text" class="form-control" id="he5" placeholder="max"></td>
+                              </tr>
+                            </tbody>
+                        </div>
+                        
+                          </table>
+                      </div>
+                      <div id="step-33">
+                        <span class="section">Deformasi</span>
+                        <br>
+                        <p><label class="StepTitle">EDM : </label></p>
+                        <div class="form-group">
+                            <label for="jp1">Jam Pengukuran</label>
+                            <input type="text" class="form-control" id="jp1">
+                          </div>
+                          <div class="form-group">
+                            <label for="ta1">Tinggi Alat(m)</label>
+                            <input type="text" class="form-control" id="ta1">
+                          </div>
+                          <div class="form-group">
+                            <label for="tu1">Tekanan Udara</label>
+                            <input type="text" class="form-control" id="tu1">
+                          </div>
+                          <div class="form-group">
+                            <label for="sd1">Suhu Dalam(Celcius)</label>
+                            <input type="text" class="form-control" id="sd1">
+                          </div>
+                          <div class="form-group">
+                            <label for="sl1">Suhu Luar(Celcius)</label>
+                            <input type="text" class="form-control" id="sl1">
+                          </div>
+                          <div class="form-group">
+                            <label for="pp1">PPM</label>
+                            <input type="text" class="form-control" id="pp1">
+                          </div>
+                          <div class="form-group">
+                            <label for="kl1">Kelembaban</label>
+                            <input type="text" class="form-control" id="kl1">
+                          </div>
+                          <br>
+                                <p><label class="StepTitle">Data Pengukuran : </label></p>
+                                <div class="form-group">
+                                <select class="form-control" id="dp0">
+                                  <option>Mriyan</option>
+                                  <option>Deles</option>
+                                  <option>RD1</option>
+                                  <option>RD2</option>
+                                  <option>RM71</option>
+                                  <option>RM72</option>
+                                  <option>RM73</option>
+                                  <option>RD92</option>
+                                </select>
+                                <div class="form-group">
+                                <label for="jm1">Jarak Miring</label>
+                                <input type="text" class="form-control" id="jm1">
+                                 </div>
+                                 <label for="jm1">Jarak Horizontal</label>
+                                <input type="text" class="form-control" id="jm1">
+                                 </div>
+                                <table class="table">
+                            <tbody>
+                                <tr><td><label>Vertikal</label></td>
+                                <td><input type="text" class="form-control" id="ve1"></td>
+                                <td><input type="text" class="form-control" id="ve2"></td>
+                                <td><input type="text" class="form-control" id="ve3"></td></tr> 
+                                <tr><td><label>Horizontal<label></td>
+                                <td><input type="text" class="form-control" id="ho4"></td>
+                                <td><input type="text" class="form-control" id="ho5"></td>
+                                <td><input type="text" class="form-control" id="ho6"></td></tr>  
+                            </div>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div id="step-44">
+                        <span class="section">Laharan</span>
+                        <div class="form-group">
+                            <label for="jm1">Jam</label>
+                            <input type="text" class="form-control" id="jm1">
+                          </div>
+                          <div class="form-group">
+                            <label for="jr1">Jam Reda</label>
+                            <input type="text" class="form-control" id="jr1">
+                          </div>
+                          <div class="form-group">
+                            <label for="cr1">Curah(mil)</label>
+                            <input type="text" class="form-control" id="cr1">
+                          </div>
+                          <div class="form-group">
+                            <label for="kt1">Keterangan</label>
+                            <input type="text" class="form-control" id="kt1">
+                          </div>
+                      </div>
+                      <div id="step-55">
+                          <br>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="x_panel">
+                                <div class="x_title">
+                                  <span class="section">Lain-lain</span>
+                                  <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                  <div id="alerts"></div>
+                                  <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                                      <ul class="dropdown-menu">
+                                      </ul>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                                      <ul class="dropdown-menu">
+                                        <li>
+                                          <a data-edit="fontSize 5">
+                                            <p style="font-size:17px">Huge</p>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 3">
+                                            <p style="font-size:14px">Normal</p>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 1">
+                                            <p style="font-size:11px">Small</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                                      <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                                      <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                                      <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                                      <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+                                      <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                                      <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                                      <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                                      <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                                      <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
+                                      <div class="dropdown-menu input-append">
+                                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                                        <button class="btn" type="button">Add</button>
+                                      </div>
+                                      <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                                      <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                                    </div>
+                                  </div>
+                
+                                  <div id="editor-one" class="editor-wrapper"></div>
+                
+                                  <textarea name="descr" id="descr" style="display:none;"></textarea>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                      <div id="step-66">
+                          <br>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="x_panel">
+                                <div class="x_title">
+                                  <span class="section">Kesimpulan</span>
+                                  <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                  <div id="alerts"></div>
+                                  <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                                      <ul class="dropdown-menu">
+                                      </ul>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                                      <ul class="dropdown-menu">
+                                        <li>
+                                          <a data-edit="fontSize 5">
+                                            <p style="font-size:17px">Huge</p>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 3">
+                                            <p style="font-size:14px">Normal</p>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 1">
+                                            <p style="font-size:11px">Small</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                                      <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                                      <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                                      <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                                      <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+                                      <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                                      <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                                      <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                                      <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                                      <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
+                                      <div class="dropdown-menu input-append">
+                                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                                        <button class="btn" type="button">Add</button>
+                                      </div>
+                                      <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                                      <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                                    </div>
+                                  </div>
+                
+                                  <div id="editor-one" class="editor-wrapper"></div>
+                
+                                  <textarea name="descr" id="descr" style="display:none;"></textarea>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                      <div id="step-77">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="x_panel">
+                                <div class="x_title">
+                                  <span class="section">Rekomendasi</span>
+                                  <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                  <div id="alerts"></div>
+                                  <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                                      <ul class="dropdown-menu">
+                                      </ul>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                                      <ul class="dropdown-menu">
+                                        <li>
+                                          <a data-edit="fontSize 5">
+                                            <p style="font-size:17px">Huge</p>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 3">
+                                            <p style="font-size:14px">Normal</p>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 1">
+                                            <p style="font-size:11px">Small</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                                      <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                                      <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                                      <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                                      <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+                                      <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                                      <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                                      <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                                      <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                                      <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
+                                      <div class="dropdown-menu input-append">
+                                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                                        <button class="btn" type="button">Add</button>
+                                      </div>
+                                      <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                                    </div>
+                
+                                    <div class="btn-group">
+                                      <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                                      <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                                    </div>
+                                  </div>
+                
+                                  <div id="editor-one" class="editor-wrapper"></div>
+                
+                                  <textarea name="descr" id="descr" style="display:none;"></textarea>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                    <!-- End SmartWizard Content -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(function() {
+        $('#datetimepicker3').datetimepicker({
+          pickDate: false
+        });
+      });
+    </script>
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- jQuery Smart Wizard -->
+    <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+    <!-- Dropzone.js -->
+    <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="../vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Select2 -->
+    <script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="../vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="../vendors/starrr/dist/starrr.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+	
+  </body>
+</html>
